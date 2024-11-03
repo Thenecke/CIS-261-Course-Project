@@ -4,7 +4,28 @@ def calculate_payroll():
     total_gross_pay = 0
     total_income_tax = 0
     total_net_pay = 0
+     
+    def get_date_range():
 
+    while True:
+
+        try:
+
+           from_date = input("Enter From Date (mm/dd/yyyy): ")
+
+           to_date = input("Enter To Date (mm/dd/yyyy): ")
+
+           # Check if dates are in the correct format from_date = datetime.strptime(from_date,"%m/%d/%Y")
+
+            to_date = datetime.strptime(to_date, "%m/%d/%Y") break
+
+          except ValueError:
+
+            print("Invalid date format. Please enter date in mm/dd/yyyy format.")
+
+          return from_date.strftime("%m/%d/%Y"),
+
+         to_date.strftime("%m/%d/%Y")
     while True:
         employee_name = input("Enter employee's name (or type 'end' to finish): ")
         if employee_name.lower() == 'end':
